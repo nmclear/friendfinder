@@ -38,7 +38,7 @@ var friendsArr = [
         "name": "Randy",
         "photo": "link",
         "scores": [
-            "1",
+            "2",
             "2",
             "3",
             "4",
