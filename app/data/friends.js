@@ -99,7 +99,7 @@ var friendsArr = [
         ]
       },
       {
-        "name": "Bruce",
+        "name": "Moana",
         "photo": "https://pbs.twimg.com/profile_images/819955513718779905/DY4UfMVj_400x400.jpg",
         "scores": [
             "1",
