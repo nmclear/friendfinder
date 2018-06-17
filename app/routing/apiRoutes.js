@@ -42,7 +42,6 @@ module.exports = function(app){
     function closestFriend(arr){
         //find smallest totalDifference
         var min = Math.min.apply(null, arr);
-
         //find indices of the smallest differences
         var indices = [];
         var index = arr.indexOf(min);
@@ -55,12 +54,7 @@ module.exports = function(app){
         for(var i = 0; i < indices.length; i++){
             var closeIndex = indices[i];
             closestArr.push(friendsData[closeIndex]);
-            console.log('this is the closest friend:  ' + friendsData[closeIndex].name)
         }
-        //list new friend(s)
         return closestArr;
-        // res.json(closestArr);
-        // var closestFriendList = closestArr.join();
-        // console.log('potential friends are: ' + closestFriendList);
     }
 };
