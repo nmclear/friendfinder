@@ -18,7 +18,7 @@ module.exports = function(app){
             // total difference for each friendsData
             var totalDifference = 0;
 
-            // loop through scores and compare newFriend to current friend
+            // loop through scores and compare newFriend to current friend (roundFriendScores)
             var roundFriendScores = friendsData[i].scores;
             for(var j = 0; j < roundFriendScores.length; j++){
                 var searchFriend = parseInt(roundFriendScores[j])
@@ -26,7 +26,6 @@ module.exports = function(app){
 
                 var questionDiff = Math.abs(searchFriend - testFriend);
                 totalDifference += questionDiff;
-
             }
             // added to arr for later check
             allFriendDiffArr.push(totalDifference);
@@ -36,7 +35,6 @@ module.exports = function(app){
 
         // add last to prevent matching friend with itself
         friendsData.push(newFriend);
-
     });
 
     function closestFriend(arr){
