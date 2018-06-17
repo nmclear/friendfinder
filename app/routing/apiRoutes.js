@@ -12,10 +12,6 @@ module.exports = function(app){
     app.post("/api/friends", function(req, res){
         var newFriend = req.body;
 
-        console.log(newFriend.scores);
-        // console.log(friendsData);
-        // console.log(friendsData[0].scores);
-
         var allFriendDiffArr = [];
         // loop through all friends in friendsData
         for(var i =0; i < friendsData.length; i++){
@@ -32,45 +28,39 @@ module.exports = function(app){
                 totalDifference += questionDiff;
 
             }
-            console.log(totalDifference);
             // added to arr for later check
             allFriendDiffArr.push(totalDifference);
         }
-        console.log(allFriendDiffArr);
         // function to find the closest friends
-        closestFriend(allFriendDiffArr);
+        res.json(closestFriend(allFriendDiffArr));
 
-
-
-
-
+        // add last to prevent matching friend with itself
         friendsData.push(newFriend);
 
     });
 
-
     function closestFriend(arr){
         //find smallest totalDifference
         var min = Math.min.apply(null, arr);
-        console.log(min);
-        // var index = arr.indexOf(min);
-        // console.log('index of min is:  ' + index);
-        // console.log('this is the closest friend:  ' + friendsData[index].name);
-    
-    //find indices of the smallest differences
+
+        //find indices of the smallest differences
         var indices = [];
         var index = arr.indexOf(min);
         while (index != -1) {
             indices.push(index);
             index = arr.indexOf(min, index + 1);
         }
-        //each of the closest friend(s)
-        console.log('lowest indexes..   ' + indices);
+        //find each of the closest friend(s)
+        var closestArr = [];
         for(var i = 0; i < indices.length; i++){
             var closeIndex = indices[i];
+            closestArr.push(friendsData[closeIndex]);
             console.log('this is the closest friend:  ' + friendsData[closeIndex].name)
         }
-
+        //list new friend(s)
+        return closestArr;
+        // res.json(closestArr);
+        // var closestFriendList = closestArr.join();
+        // console.log('potential friends are: ' + closestFriendList);
     }
-
 };

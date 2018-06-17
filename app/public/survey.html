@@ -281,14 +281,20 @@
 
             $.post('/api/friends', newFriend,
                 function(data){
+                    console.log('test test');
                     console.log('friend added');
+                    // console.log(data);
+
+                    for(var i = 0; i < data.length; i++){
+                        console.log(data[i].name);
+                    };
                 });
 
             //Clear input fields
             $('#name').val('');
             $('#photo').val('');
 
-    
+            console.log('test');
 
 
         });
