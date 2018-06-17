@@ -4,38 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Friend Finder</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/images/favicon-group.ico"/>
+    <title>Friend Finder | Survey</title>
 
+    <link rel="stylesheet" href="../../assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../assets/css/surveyStyle.css">
 
 </head>
 <body>
 
     <div class="container">
-        <h1 class="text-center">Survey Questions</h1>
+        <h1 class="text-center surveyHeader">Survey Questions</h1>
         <hr>
 
         <h2>About You</h2>
-        <h5>Name (Required) </h5>
+        <h4>Name (Required) </h4>
         <input type="text" id="name" class="form-control mb-3" placeholder="Name" required>
-        <h5>Photo Link (Required)</h5>
+        <h4>Photo Link (Required)</h4>
         <input type="text" id="photo" class="form-control mb-3" placeholder="Link" required>
         <hr>
 
         <div class="container questionContainer">
             <div class="row">
-                <div class="col-s-12">
+                <div class="col-s-12 questionTitleDiv">
                     <h4>Question 1</h4>
                 </div>
             </div>
             <div class="row">
-                <div class="col-s-12">
+                <div class="col-s-12 questionDiv">
                     <h6>Your mind is always buzzing with unexplored ideas and plans.</h6>
                 </div>
             </div>
             <div class="row mb-3 input-group">
-                <div class="col-xs-3">
-                    <select class="custom-select" id="question1">
+                <div class="col-s-12 questionOptionsDiv">
+                    <select class="custom-select selectOptions" id="question1">
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -45,19 +49,19 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-s-12">
+                <div class="col-s-12 questionTitleDiv">
                     <h4>Question 2</h4>
                 </div>
             </div>
             <div class="row">
-                <div class="col-s-12">
+                <div class="col-s-12 questionDiv">
                     <h6>Generally speaking, you rely more on your experience than your imagination.</h6>
                 </div>
             </div>
             <div class="row mb-3 input-group">
-                <div class="col-xs-3">
+                <div class="col-s-12 questionOptionsDiv">
                     <select class="custom-select" id="question2">
-                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="1">1 (Strongly Disagree)<i class="fas fa-angle-down"></i></option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
@@ -66,17 +70,17 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-s-12">
+                <div class="col-s-12 questionTitleDiv">
                     <h4>Question 3</h4>
                 </div>
             </div>
             <div class="row">
-                <div class="col-s-12">
+                <div class="col-s-12 questionDiv">
                     <h6>You find it easy to stay relaxed and focused even when there is some pressure.</h6>
                 </div>
             </div>
             <div class="row mb-3 input-group">
-                <div class="col-xs-3">
+                <div class="col-s-12 questionOptionsDiv">
                     <select class="custom-select" id="question3">
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -87,17 +91,17 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-s-12">
+                <div class="col-s-12 questionTitleDiv">
                     <h4>Question 4</h4>
                 </div>
             </div>
             <div class="row">
-                <div class="col-s-12">
+                <div class="col-s-12 questionDiv">
                     <h6>You rarely do something just out of sheer curiosity.</h6>
                 </div>
             </div>
             <div class="row mb-3 input-group">
-                <div class="col-xs-3">
+                <div class="col-s-12 questionOptionsDiv">
                     <select class="custom-select" id="question4">
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -108,17 +112,17 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-s-12">
+                <div class="col-s-12 questionTitleDiv">
                     <h4>Question 5</h4>
                 </div>
             </div>
             <div class="row">
-                <div class="col-s-12">
+                <div class="col-s-12 questionDiv">
                     <h6>People can rarely upset you.</h6>
                 </div>
             </div>
             <div class="row mb-3 input-group">
-                <div class="col-xs-3">
+                <div class="col-s-12 questionOptionsDiv">
                     <select class="custom-select" id="question5">
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -129,17 +133,17 @@
             </div>
             </div>
             <div class="row">
-                <div class="col-s-12">
+                <div class="col-s-12 questionTitleDiv">
                     <h4>Question 6</h4>
                 </div>
             </div>
             <div class="row">
-                <div class="col-s-12">
+                <div class="col-s-12 questionDiv">
                     <h6>It is often difficult for you to relate to other people's feelings.</h6>
                 </div>
             </div>
             <div class="row mb-3 input-group">
-                <div class="col-xs-3">
+                <div class="col-s-12 questionOptionsDiv">
                     <select class="custom-select" id="question6">
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -150,17 +154,17 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-s-12">
+                <div class="col-s-12 questionTitleDiv">
                     <h4>Question 7</h4>
                 </div>
             </div>
             <div class="row">
-                <div class="col-s-12">
+                <div class="col-s-12 questionDiv">
                     <h6>In a discussion, truth should be more important than people's sensitivities.</h6>
                 </div>
             </div>
             <div class="row mb-3 input-group">
-                <div class="col-xs-3">
+                <div class="col-s-12 questionOptionsDiv">
                     <select class="custom-select" id="question7">
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -171,17 +175,17 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-s-12">
+                <div class="col-s-12 questionTitleDiv">
                     <h4>Question 8</h4>
                 </div>
             </div>
             <div class="row">
-                <div class="col-s-12">
+                <div class="col-s-12 questionDiv">
                     <h6>You rarely get carried away by fantasies and ideas.</h6>
                 </div>
             </div>
             <div class="row mb-3 input-group">
-                <div class="col-xs-3">
+                <div class="col-s-12 questionOptionsDiv">
                     <select class="custom-select" id="question8">
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -192,17 +196,17 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-s-12">
+                <div class="col-s-12 questionTitleDiv">
                     <h4>Question 9</h4>
                 </div>
             </div>
             <div class="row">
-                <div class="col-s-12">
+                <div class="col-s-12 questionDiv">
                     <h6>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h6>
                 </div>
             </div>
             <div class="row mb-3 input-group">
-                <div class="col-xs-3">
+                <div class="col-s-12 questionOptionsDiv">
                     <select class="custom-select" id="question9">
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -213,17 +217,17 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-s-12">
+                <div class="col-s-12 questionTitleDiv">
                     <h4>Question 10</h4>
                 </div>
             </div>
             <div class="row">
-                <div class="col-s-12">
+                <div class="col-s-12 questionDiv">
                     <h6>You feel more energetic after spending time with a group of people.</h6>
                 </div>
             </div>
             <div class="row mb-3 input-group">
-                <div class="col-xs-3">
+                <div class="col-s-12 questionOptionsDiv">
                     <select class="custom-select" id="question10">
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -235,16 +239,18 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block" id="surveySubmit">Submit</button>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" id="surveySubmit"><i class="fas fa-star"></i>Submit</button>
                 </div>
             </div>
             <br>
         </div>
         <div class="row">
             <div class="col">
-                <p>
-                    <a href="/api/friends" target="_blank">API Friend List</a> || <a href="https://github.com/nmclear/friendfinder" target="_blank">GitHub Repo</a>
-                </p>
+                <div class="text-center footer">
+                    <p class="footerText">
+                        <a class="footerLink" href="/api/friends" target="_blank">API Friend List</a> || <a class="footerLink" href="https://github.com/nmclear/friendfinder" target="_blank">GitHub Repo</a>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -286,10 +292,9 @@
 
     <script type="text/javascript">
 
-    
         $('#surveySubmit').on("click", function(event){
             event.preventDefault();
-
+            
             var newFriend = {
                 name: $('#name').val(),
                 photo:$('#photo').val(),
@@ -309,9 +314,8 @@
 
             $.post('/api/friends', newFriend,
                 function(data){
-
+                    // data is array of closest friend objects
                     for(var i = 0; i < data.length; i++){
-
                         var modalDiv = $("<div>");
                         modalDiv.addClass("newFriendModal text-center");
                         modalDiv.attr("id", "newFriend" + i);
@@ -319,10 +323,8 @@
 
                         $('#newFriend' + i).append("<h3>New Friend: " + data[i].name + "</h3>");
                         $('#newFriend' + i).append("<img src=\"" + data[i].photo + "\" + alt=\"newFriend\">");
-
                     };
                     $('#friendsModal').modal('show');
-
                 });
 
             //Clear input fields
