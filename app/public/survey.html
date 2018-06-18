@@ -294,42 +294,49 @@
 
         $('#surveySubmit').on("click", function(event){
             event.preventDefault();
-            
-            var newFriend = {
-                name: $('#name').val(),
-                photo:$('#photo').val(),
-                scores: [
-                    $('#question1').val(),
-                    $('#question2').val(),
-                    $('#question3').val(),
-                    $('#question4').val(),
-                    $('#question5').val(),
-                    $('#question6').val(),
-                    $('#question7').val(),
-                    $('#question8').val(),
-                    $('#question9').val(),
-                    $('#question10').val()
-                ]
-            };
+            $('#friendsModalBody').text('');
+            //Check for input in name and link
+            if($('#name').val() !== '' && $('#photo').val() !== ''){
 
-            $.post('/api/friends', newFriend,
-                function(data){
-                    // data is array of closest friend objects
-                    for(var i = 0; i < data.length; i++){
-                        var modalDiv = $("<div>");
-                        modalDiv.addClass("newFriendModal text-center");
-                        modalDiv.attr("id", "newFriend" + i);
-                        $('#friendsModalBody').append(modalDiv);
+                var newFriend = {
+                    name: $('#name').val(),
+                    photo:$('#photo').val(),
+                    scores: [
+                        $('#question1').val(),
+                        $('#question2').val(),
+                        $('#question3').val(),
+                        $('#question4').val(),
+                        $('#question5').val(),
+                        $('#question6').val(),
+                        $('#question7').val(),
+                        $('#question8').val(),
+                        $('#question9').val(),
+                        $('#question10').val()
+                    ]
+                };
 
-                        $('#newFriend' + i).append("<h3>New Friend: " + data[i].name + "</h3>");
-                        $('#newFriend' + i).append("<img src=\"" + data[i].photo + "\" + alt=\"newFriend\">");
-                    };
-                    $('#friendsModal').modal('show');
-                });
+                $.post('/api/friends', newFriend,
+                    function(data){
+                        // data is array of closest friend objects
+                        for(var i = 0; i < data.length; i++){
+                            var modalDiv = $("<div>");
+                            modalDiv.addClass("newFriendModal text-center");
+                            modalDiv.attr("id", "newFriend" + i);
+                            $('#friendsModalBody').append(modalDiv);
 
-            //Clear input fields
-            $('#name').val('');
-            $('#photo').val('');
+                            $('#newFriend' + i).append("<h3>New Friend: " + data[i].name + "</h3>");
+                            $('#newFriend' + i).append("<img src=\"" + data[i].photo + "\" + alt=\"newFriend\">");
+                        };
+                        $('#friendsModal').modal('show');
+                    });
+
+                //Clear input fields
+                $('#name').val('');
+                $('#photo').val('');
+            } else {
+                $('#friendsModalBody').append("<h5>Please enter a name and photo link.</h5>");
+                $('#friendsModal').modal('show');
+            }
         });
 
     </script>
